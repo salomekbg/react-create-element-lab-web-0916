@@ -1,16 +1,11 @@
-const meInReact = React.createElement('div', {className: 'me'},
-  [
-    React.createElement('h1', {}, 'An Awesome Person'),
-    React.createElement('p', {}, 'Who is learning React'),
-    React.createElement('ul', {className: 'me__interests'},
-      [
-        React.createElement('li', {}, 'JavaScript'),
-        React.createElement('li', {}, 'React'),
-        React.createElement('li', {}, 'Movies'),
-        React.createElement('li', {}, 'Ice cream'),
-      ]
-    )
-  ]
-)
+let h1 = React.createElement('h1', {}, 'An Awesome Person');
+let p = React.createElement('p', {}, 'Who is learning React');
+let li1 = React.createElement('li', {}, 'JavaScript');
+let li2 = React.createElement('li', {}, 'React');
+let li3 = React.createElement('li', {}, 'Movies');
+let li4 = React.createElement('li', {}, 'Ice cream');
+let ul = React.createElement('ul', {}, [li1, li2, li3, li4]);
 
-ReactDOM.render(meInReact, document.getElementById('main'))
+const meInReact =React.createElement('div', {className: 'me'}, [h1, p, ul]);
+
+ReactDOM.render(meInReact, document.getElementById('main'));
